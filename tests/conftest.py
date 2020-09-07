@@ -1,4 +1,4 @@
-from tests.fixtures.url_server import url_server
+from tests.fixtures import *
 
 
 def pytest_generate_tests(metafunc):

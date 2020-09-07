@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.fixture
-def url_server(request):
+def url_server(db_connection):
     from glow.url_server import UrlServer
 
-    return UrlServer(request.param)
+    return UrlServer(session=db_connection)
