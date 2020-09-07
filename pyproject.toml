@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "glow"
+version = "0.1.0"
+description = "Low performance Google-like in Python"
+authors = ["LSmith-Zenoscave <lsmith@zenoscave.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+requests = "^2.24.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.0.1"
+pytest-cov = "^2.10.1"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
