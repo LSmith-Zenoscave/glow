@@ -1,5 +1,5 @@
 
-from typing import List, ForwardRef
+from typing import List
 from glow.database import Base
 from sqlalchemy import Column, ForeignKey, Integer, Table, String, UniqueConstraint
 from sqlalchemy.orm import relationship, backref
@@ -44,9 +44,6 @@ class UrlCreate(UrlBase):
     pass
 
 
-Url = ForwardRef('Url')
-
-
 class Url(UrlBase):
     id: int
     links: List[UrlBase] = []
@@ -54,6 +51,3 @@ class Url(UrlBase):
 
     class Config:
         orm_mode = True
-
-
-Url.update_forward_refs()
